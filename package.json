@@ -4,13 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "run": "live-server"
+    "build": "tsc && cp src/*.html dist && cp src/*.css dist",
+    "watch": "watch 'npm run build' src",
+    "run": "live-server dist",
+    "clean": "rm -rf dist"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "@types/chart.js": "^2.9.29",
+    "chart.js": "^2.9.4"
   }
 }
