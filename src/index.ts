@@ -1,4 +1,4 @@
-import Chart from "./chart.js";
+import { Chart } from "./chart.js";
 import "./chart.js";
 
 let canvas: HTMLCanvasElement = document.querySelector("#forChart") as HTMLCanvasElement;
