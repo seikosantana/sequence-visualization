@@ -31,9 +31,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
 
-import { Moment } from 'moment';
-
-export declare class Chart {
+declare class Chart {
     static readonly Chart: typeof Chart;
     constructor(
         context: string | CanvasRenderingContext2D | HTMLCanvasElement | ArrayLike<CanvasRenderingContext2D | HTMLCanvasElement>,
@@ -103,7 +101,7 @@ interface PluginDescriptor {
     options: Chart.ChartPluginsOptions;
 }
 
-export declare class PluginServiceStatic {
+declare class PluginServiceStatic {
     register(plugin: Plugin): void;
     unregister(plugin: Plugin): void;
     clear(): void;
@@ -266,10 +264,10 @@ declare namespace Chart {
     }
 
     interface ChartPoint {
-        x?: number | string | Date | Moment;
-        y?: number | string | Date | Moment;
+        x?: number | string | Date;
+        y?: number | string | Date;
         r?: number;
-        t?: number | string | Date | Moment;
+        t?: number | string | Date;
     }
 
     interface ChartConfiguration {
@@ -280,7 +278,7 @@ declare namespace Chart {
     }
 
     interface ChartData {
-        labels?: Array<string | string[] | number | number[] | Date | Date[] | Moment | Moment[]>;
+        labels?: Array<string | string[] | number | number[] | Date | Date[]>;
         datasets?: ChartDataSets[];
     }
 
@@ -918,3 +916,5 @@ declare namespace Chart {
     }
 }
 
+export = Chart;
+export as namespace Chart;
