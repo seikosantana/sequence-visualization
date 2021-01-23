@@ -1,10 +1,10 @@
-import {Chart} from "./chart";
+import { Chart } from "./chart";
 import "./chart.js";
 
 let canvas: HTMLCanvasElement = document.querySelector("#forChart") as HTMLCanvasElement;
-// let context = canvas.getContext("2d");
+let context: CanvasRenderingContext2D = canvas.getContext("2d") as CanvasRenderingContext2D;
 
-let mainChart: Chart = new Chart(canvas, {
+let mainChart: Chart = new Chart(context, {
     type: "line",
     data: {
         labels: [
