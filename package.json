@@ -17,7 +17,6 @@
     "watch": "^1.0.2"
   },
   "dependencies": {
-    "@types/chart.js": "^2.9.29",
-    "chart.js": "^2.9.4"
+    "@types/chart.js": "^2.9.29"
   }
 }
