@@ -1,5 +1,5 @@
-import { Chart } from "./chart";
-import "./chart.js";
+/// <reference types="chart.js" />
+
 
 let canvas: HTMLCanvasElement = document.querySelector("#forChart") as HTMLCanvasElement;
 let context: CanvasRenderingContext2D = canvas.getContext("2d") as CanvasRenderingContext2D;
